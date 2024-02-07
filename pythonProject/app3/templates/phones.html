@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+
+{% block phones %}
+<ul>
+
+{% for p in phones %}
+    <a href='{{ p.slug }}' style="color: blue; font-size: 40px"> {{ p.name }} </a>
+    <p>Стоимость: {{ p.price }}</p>
+    <img src="{{ p.image }}">
+
+<hr>
+
+{% endfor %}
+
+</ul>>
+{% endblock phones %}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+<h style="color: blue; font-size: 50px"> {{ name }} </h><br>
+    <a style="font-size: 25px">
+        Стоимость: {{ price }}<br>
+        <img src="{{ image }}"><br>
+        Наличие LTE: {{ lte }}<br>
+        Дата релиза: {{ release }}<br>
+    </a>
+    <a href="{% url 'lp' %}">Вернуться в каталог</a>
+</body>
+</html>
