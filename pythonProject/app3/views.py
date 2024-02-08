@@ -42,7 +42,10 @@ sort_phones = ['название', 'с дешевых', 'с дорогих']
 
 
 def list_phones(request):
-    phones = Phone.objects.all()
+    sort = request.GET.get('sort', 'id')
+    if sort == 'min_price': sort = 'price'
+    if sort == 'max_price': sort = '-price'
+    phones = Phone.objects.order_by(sort).all()
     context = {
         'phones': phones,
     }
@@ -60,8 +63,3 @@ def show_post(request, slug):
         'lte': ('Нет', 'Да')[post.lte_exists],
     }
     return render(request, 'post.html', context=context)
-
-
-def sort_phones(request, srt=None):
-    phones = Phone.objects.all()
-    return phones

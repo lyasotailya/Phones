@@ -7,12 +7,14 @@
 <body>
 
 {% block main_sort_phones %}
-<ul>Сортировать по:
-    <a class="sort-item" href="?sort=name">названию</a>
-    <a class="sort-item" href="?sort=min_price">начиная с дешёвых</a>
-    <a class="sort-item" href="?sort=max_price">начиная с дорогих</a>
 
-</ul>
+<div class="sort-block">
+    <ul>Сортировать по:
+        <a class="sort-item" href="?sort=name">названию</a>
+        <a class="sort-item" href="?sort=min_price">начиная с дешёвых</a>
+        <a class="sort-item" href="?sort=max_price">начиная с дорогих</a>
+    </ul>
+</div>
 
 {% endblock main_sort_phones %}
 <br>
